@@ -1,0 +1,23 @@
+{
+  "name": "api-cloud-kitchen",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mohan4787/api-cloud-kitchen#readme",
+  "bugs": {
+    "url": "https://github.com/mohan4787/api-cloud-kitchen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohan4787/api-cloud-kitchen.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

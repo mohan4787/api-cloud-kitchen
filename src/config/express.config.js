@@ -1,14 +1,7 @@
 const express = require("express")
-
+const router = require("./router.config")
 const app = express()
 
-app.get("/", (req, res, next) => {
-    res.json({
-        data: "Welcome to Cloud Kitchen API",
-        message: "This is a REST API for Cloud Kitchen Application",
-        status: "Success",
-        options: null
-    })
-})
+app.use('/api/v1/', router)
 
 module.exports = app;

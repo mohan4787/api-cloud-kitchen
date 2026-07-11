@@ -18,6 +18,14 @@ app.use((error, req,res, next) => {
     let msg = error.message || "Internal server error";
     let status = error.status || "INTERNAL_SERVER_ERROR";
 
+    if(req.file) {
+        this.deleteFile(req.file.path)
+    } else if(req.files){
+        req.files.forEach((file) => {
+            this.deleteFile(file.path)
+        })
+    }
+
     res.status(code).json({
         error: details,
         message: msg,
